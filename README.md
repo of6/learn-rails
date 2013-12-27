@@ -1,4 +1,4 @@
 Learning Rails
 ==
 
-Tutorial readme.
+demo on heroku: http://serious-internets.herokuapp.com
