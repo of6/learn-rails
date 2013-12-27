@@ -19,7 +19,7 @@
 @mixin six-columns-centered {
   @extend .small-6;
   @extend .columns;
-  @extend .text-center;
+  @extend .text-left;
   }
 // create your own classes
 // to make views framework-neutral
@@ -33,16 +33,16 @@
   @include six-columns-centered;
   }
 .submit {
-  @extend .button;
-  @extend .radius;
+  @include button(1, black, 0);
   }
 // apply styles to HTML elements
 // to make views framework-neutral
 main {
   @include twelve-columns;
-  background-color: #eee;
+  background-color: #fff;
   }
 section {
   @extend .row;
   margin-top: 20px;
+  margin-bottom: 20px;
   }

@@ -1,20 +1,24 @@
-<% content_for :title do %>Foobar Nooban<% end %>
-<% content_for :description do %>Website of Foobar Nooban<% end %>
-<section>
-  <img src="http://lorempixel.com/1170/600/cats/1" alt="">
-</section>
-<section>
-  <div class="column">
-    <h2>Stay in touch.</h2>
-  </div>
-  <div class="column">
-    <div class="form-centered">
-      <%= simple_form_for @visitor do |f| %>
-        <%= f.error_notification %>
-        <%= f.input :email, label: false, placeholder: 'Your email address...' %>
-        <br>
-        <%= f.button :submit, "Sign up for the newsletter", class: "submit" %>
-      <% end %>
-    </div>
-  </div>
+<% content_for :title do %>Serious Internet<% end %>
+<% content_for :description do %>This site is only for Serious Internets<% end %>
+<section class="collapse">
+  
+  <section class="small-12 large-6 columns">
+    <%= image_tag 'now-remember-kids-the-internet-is-serious-business.png' %>
+  </section>
+
+  <section class="small-12 large-5 columns">
+    <h4>Serious Mailing Lists!</h4>
+    <%= simple_form_for @visitor do |f| %>
+      <%= f.error_notification %>
+      <div class="row collapse">
+        <div class="small-9 columns">
+          <%= f.input :email, label: false, placeholder: 'Your email address...' %>
+        </div>
+        <div class="small-3 columns">
+          <%= f.button :submit, "Get Serious", class: "submit small" %>
+        </div>
+      </div>
+    <% end %>
+  </section>
+
 </section>
